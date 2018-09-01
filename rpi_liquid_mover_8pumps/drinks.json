@@ -1,0 +1,100 @@
+{ 
+	"Arnold Palmer": {
+		"type": "nonalcoholic",
+		"ingredients": {
+			"icetea": 100,
+			"lemonade": 100
+		}
+	}, 
+	"Roy Rogers": {
+		"type": "nonalcoholic",
+		"ingredients": {
+			"grenadine": 6,
+			"cola": 194
+		}
+	},
+	"Spezi" : {
+		"type": "nonalcoholic",
+		"ingredients": {
+			"orangesoda": 100,
+			"cola": 100
+		}
+	},
+	"Radler" : {
+		"synonym": "Shandy",
+		"type": "alcoholic",
+		"ingredients": {
+			"beer": 100,
+			"lemonade": 100
+		}
+	},
+	"Bloody Mary": {
+		"type": "alcoholic",
+		"ingredients": {
+			"vodka": 60,
+			"tomatojuice": 120,
+			"lemonade": 20
+		}
+	}, 
+	"Mimosa": {
+		"type": "alcoholic",
+		"ingredients": {
+			"sparklingwine": 100,
+			"orangejuice": 100
+		}
+	},
+	"Rum & Coke": {
+		"type": "alcoholic",
+		"ingredients": {
+			"rum": 50,
+			"coke": 150
+		}
+	}, 
+	"Gin & Tonic": {
+		"type": "alcoholic",
+		"ingredients": {
+			"gin": 50,
+			"tonic": 150
+		}
+	}, 
+	"Long Island": {
+		"type": "alcoholic",
+		"ingredients": {
+			"gin": 15,
+			"rum": 15,
+			"vodka": 15,
+			"tequila": 15,
+			"coke": 100,
+			"orangejuice": 30
+		}
+	}, 
+	"Screwdriver": {
+		"type": "alcoholic",
+		"ingredients": {
+			"vodka": 50,
+			"orangejuice": 150
+		}
+	},
+	"Margarita": {
+		"type": "alcoholic",
+		"ingredients": {
+			"tequila": 50,
+			"mmix": 150
+		}
+	},
+	"Gin & Juice": {
+		"type": "alcoholic",
+		"ingredients": {
+			"gin": 50,
+			"orangejuice": 150
+		}
+	}, 
+	"Tequila Sunrise" : {
+		"type": "alcoholic",
+		"ingredients": {
+			"tequila": 60,
+			"orangejuice": 120,
+			"grenadine": 20
+		}
+	}
+}
