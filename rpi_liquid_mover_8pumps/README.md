@@ -39,3 +39,7 @@
 * Take all tubes out of the containers and put them into the cleaning container
 * Put a cup into the machine to collect the water with drink residues from the tubes
 * Run the `CLEAN ALL` procedure (maybe even several times until the water comes out clean)
+
+## Mobility
+
+* TO-DO: If we want to provide the flexibility of the machine being transportable, then we need to define how it will connect to the internet. 
