@@ -13,6 +13,15 @@
 			"cola": 194
 		}
 	},
+	"Safe Sex on the Beach": {
+		"synonym": "Cuddles on the Beach",
+		"type": "nonalcoholic",
+		"ingredients": {
+			"cranberry": 75,
+			"grapefruit": 75,
+			"peach": 50
+		}
+	},
 	"Spezi" : {
 		"type": "nonalcoholic",
 		"ingredients": {
@@ -26,6 +35,47 @@
 		"ingredients": {
 			"beer": 100,
 			"lemonade": 100
+		}
+	},
+	"Sea Breeze": {
+		"type": "alcoholic",
+		"ingredients": {
+			"vodka": 45,
+			"cranberry": 120,
+			"grapefruit": 35
+		}
+	},
+	"Bay Breeze": {
+		"type": "alcoholic",
+		"ingredients": {
+			"vodka": 45,
+			"cranberry": 120,
+			"pineapple": 35
+		}
+	},
+	"Cape Codder": {
+		"synonym": "Cape Cod",
+		"type": "alcoholic",
+		"ingredients": {
+			"vodka": 50,
+			"cranberry": 150
+		}
+	},
+	"Sex on the Beach": {
+		"type": "alcoholic",
+		"ingredients": {
+			"vodka": 57,
+			"orangejuice": 57,
+			"cranberry": 57,
+			"peachschnapps": 29
+		}
+	},
+	"Woo Woo": {
+		"type": "alcoholic",
+		"ingredients": {
+			"vodka": 57,
+			"cranberry": 114,
+			"peachschnapps": 29
 		}
 	},
 	"Bloody Mary": {
