@@ -42,7 +42,7 @@ class Bartender():
             if len(recipe) == len(drinks[drink]['ingredients']):
                 self.menu[drink] = {'ingredients': drinks[drink]['ingredients'], 'recipe': recipe}
         # Save menu to JSON file
-        with open('menu.json', 'w') as outfile:
+        with open('data/menu.json', 'w') as outfile:
             json.dump(self.menu, outfile, indent = 4)
 
     def setup(self):
@@ -51,7 +51,7 @@ class Bartender():
         logging.basicConfig(filename=LOG_FILE, format=LOG_FORMAT, level=LOG_LEVEL)
 
         # Load pump configuration from file
-        self.pumps = json.load(open('pumps.json'))
+        self.pumps = json.load(open('data/pumps.json'))
 
         # Loop through pins and set mode and state to 'low'
         for pump in self.pumps.keys():
@@ -65,7 +65,7 @@ class Bartender():
                 ingredients[p['value']] = p['pin']
 
         # Load drinks
-        self.drinks = json.load(open('drinks.json'))
+        self.drinks = json.load(open('data/drinks.json'))
 
         # Create a menu
         self.createMenu(self.drinks, ingredients)
