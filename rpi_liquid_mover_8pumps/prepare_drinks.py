@@ -117,6 +117,6 @@ class Bartender():
     def __init__(self):
         self.setup()
 
-bartender = Bartender()
-#bartender.makeDrink('Gin & Tonic')
+#bartender = Bartender()
+#bartender.makeDrink('Fruit Mix')
 #bartender.clean()

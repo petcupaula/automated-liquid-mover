@@ -17,26 +17,26 @@
 	"pump_4": {
 		"name": "Pump 4",
 		"pin": 17, 
-		"value": "orangejuice"
+		"value": null
 	},
 	"pump_5": {
 		"name": "Pump 5",
 		"pin": 27, 
-		"value": "lemonade"
+		"value": "orangejuice"
 	},
 	"pump_6": {
 		"name": "Pump 6",
 		"pin": 22, 
-		"value": "coke"
+		"value": "cranberry"
     },
 	"pump_7": {
 		"name": "Pump 7",
 		"pin": 10, 
-		"value": "icetea"
+		"value": "grapefruit"
 	},
 	"pump_8": {
 		"name": "Pump 8",
 		"pin": 9, 
-		"value": "vodka"
+		"value": null
 	}
 }

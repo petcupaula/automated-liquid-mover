@@ -22,6 +22,14 @@
 			"peach": 50
 		}
 	},
+	"Fruit Mix": {
+		"type": "nonalcoholic",
+		"ingredients": {
+			"cranberry": 75,
+			"grapefruit": 75,
+			"orangejuice": 50
+		}
+	},
 	"Spezi" : {
 		"type": "nonalcoholic",
 		"ingredients": {
