@@ -19,6 +19,13 @@ def pour(pin, pourTime):
     time.sleep(pourTime)
     GPIO.output(pin, GPIO.HIGH) 
 
+def pour2(pin1, pin2, pourTime):
+    GPIO.output(pin1, GPIO.LOW)
+    GPIO.output(pin2, GPIO.LOW)
+    time.sleep(pourTime)
+    GPIO.output(pin1, GPIO.HIGH) 
+    GPIO.output(pin2, GPIO.HIGH)
+
 def test(pin):
     # Test params
     ml = 100
@@ -54,4 +61,7 @@ if __name__ == "__main__":
             printUsageInfo("Unknown cmd or pin")
     else:
         printUsageInfo("Number of args mismatch")
-    
+
+    #setup()   
+    #pour2(27,17,5)
+    #GPIO.cleanup()
