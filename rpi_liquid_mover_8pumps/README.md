@@ -17,7 +17,7 @@
     * The recipes should define how many parts of each liquid is required
 * The mapping of which liquids are available at each pump is defined in `pumps.json`
     * The mapping should be easy to update from an interface (TO-DO: do we support this over voice as well, or through a web interface/app only?)
-    * TO-DO: need to test whether the flow is different from liquid to liquid and if so, need to provide a way of defining this flow and using the value in preparing the drinks
+    * The flow does not appear to be different between liquids tested so fat, but if there are any major differences (for example: flow of vodka vs tomato juice) then we need to provide a way of defining this flow and using the value in preparing the drinks
 * A menu is created (`menu.json`) based on known recipes and available liquids. The menu defines what drinks can be made.
     * This menu should be displayed in an interface (TO-DO: if web interface/app, add images for each drink)
     * If the ingredients for the drink are not currently available, a drink will not be made, and the user must be informed (TO-DO: how to handle this for voice assistants? create interface for web/app)
@@ -28,14 +28,14 @@
 
 ## Changing the connection of a pump with a different container
 
-* Run the `REVERSE [PUMP#]` procedure in which liquid from PUMP# is returned back to the container (maybe several times until the tube appears empty) 
-* [Optional but recommended] Put the tube into cleaning container with water (maybe hot water even, or with bleach) & run the `CLEAN [PUMP#]` procedure (maybe even several times until the water comes out clean) to clean the tube from the previous drink
+* Put the tube into cleaning container with water (maybe hot water even, or with bleach)
+* Put a cup into the machine to collect the water with drink residues from the tube
+* Run the `CLEAN [PUMP#]` procedure (maybe even several times until the water comes out clean) to clean the tube from the previous drink
 * Put the tube into the new drink container 
 * Run the `PREPARE [PUMP#]` procedure (maybe even several times until the liquid is visible throughout the length of the tube) to move the liquid from the new container through the tube, and push out any air, so it is ready for the next drink
 
 ## Cleaning procedure
 
-* Run the `REVERSE ALL` procedure in which liquid from tubes is moved back to the container (maybe several times until the tubes appear empty)
 * Prepare a cleaning container with water (maybe hot water even, or with bleach?)
 * Take all tubes out of the containers and put them into the cleaning container
 * Put a cup into the machine to collect the water with drink residues from the tubes
