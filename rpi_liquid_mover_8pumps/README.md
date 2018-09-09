@@ -17,6 +17,7 @@
     * The recipes should define how many parts of each liquid is required
 * The mapping of which liquids are available at each pump is defined in `pumps.json`
     * The mapping should be easy to update from an interface (TO-DO: do we support this over voice as well, or through a web interface/app only?)
+    * TO-DO: need to test whether the flow is different from liquid to liquid and if so, need to provide a way of defining this flow and using the value in preparing the drinks
 * A menu is created (`menu.json`) based on known recipes and available liquids. The menu defines what drinks can be made.
     * This menu should be displayed in an interface (TO-DO: if web interface/app, add images for each drink)
     * If the ingredients for the drink are not currently available, a drink will not be made, and the user must be informed (TO-DO: how to handle this for voice assistants? create interface for web/app)
@@ -39,7 +40,10 @@
 * Take all tubes out of the containers and put them into the cleaning container
 * Put a cup into the machine to collect the water with drink residues from the tubes
 * Run the `CLEAN ALL` procedure (maybe even several times until the water comes out clean)
+* Take all the tubes out of the cleaning container
+* Run the `CLEAN ALL` procedure one more time, in order to move the water through the tubes and fill it with air instead so that we don't end up with storing water in the tubes
 
-## Mobility
+## Connectivity
 
-* TO-DO: If we want to provide the flexibility of the machine being transportable, then we need to define how it will connect to the internet. 
+* TO-DO: If we want to provide the flexibility of the machine being transportable, then we need to define how it will connect to the internet. Example of remembering multiple wifi connections: https://www.thepolyglotdeveloper.com/2016/08/connect-multiple-wireless-networks-raspberry-pi/ 
+* TO-DO: Should the machine be able to operate offline, and what are the implications?
