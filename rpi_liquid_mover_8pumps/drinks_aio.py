@@ -30,7 +30,7 @@ inventory = {}
 
 def setup_firebase():
     global db
-    cred = credentials.Certificate('serviceaccount.json')
+    cred = credentials.Certificate('/home/paula/automated-liquid-mover/rpi_liquid_mover_8pumps/serviceaccount.json')
     firebase_admin.initialize_app(cred)
     db = firestore.client()
 

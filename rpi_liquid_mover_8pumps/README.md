@@ -4,12 +4,21 @@
 
 ```
 pip3 install adafruit-io
+
 # Set AIOKEY and AIOUSER environment variable:
 sudo nano /etc/environment
 pip3 install firebase-admin
 ```
 
-## Running 
+## Running at startup
+
+```
+sudo cp drinks /etc/init/drinks
+sudo chmod +x /etc/init/drinks
+sudo update-rc.d drinks defaults
+```
+
+## Running manually
 
 ```
 python3 drinks_aio.py
