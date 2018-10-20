@@ -1,5 +1,13 @@
 # Operating Procedures
 
+## Installation
+
+```
+pip3 install adafruit-io
+sudo nano /etc/environment
+pip3 install firebase-admin
+```
+
 ## Ordering a drink
 
 ### Interfaces
