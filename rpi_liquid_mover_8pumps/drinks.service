@@ -1,0 +1,14 @@
+[Unit]
+Description=Drinks Mixer
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/paula/automated-liquid-mover/rpi_liquid_mover_8pumps/drinks_aio.py
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=paula
+
+[Install]
+WantedBy=multi-user.target
+

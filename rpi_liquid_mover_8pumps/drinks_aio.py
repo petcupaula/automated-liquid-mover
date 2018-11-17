@@ -9,19 +9,22 @@ from Adafruit_IO import MQTTClient
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
+import AIOconfig
 
 # Assuming for now that the flow rate is the same for all pumps and liquids
 FLOW_RATE = 60.0/100.0
 # Number of seconds dedicated to cleaning each pump
 CLEAN_TIME = 20
 # Adafruit IO setup
-aio_key = os.environ['AIOKEY']
-aio_user = os.environ['AIOUSER']
+aio_key = AIOconfig.AIOKEY
+aio_user = AIOconfig.AIOUSER
 aio_mqtt = MQTTClient(aio_user, aio_key)
 mqtt_feed_sub = 'drink'
+# Working directory
+wd = '/home/paula/automated-liquid-mover/rpi_liquid_mover_8pumps/'
 # Logging
 LOG_LEVEL = logging.INFO
-LOG_FILE = "bartender.log"
+LOG_FILE = wd + "bartender.log"
 LOG_FORMAT = "%(asctime)s %(levelname)s %(message)s"
 
 db = None
@@ -30,7 +33,7 @@ inventory = {}
 
 def setup_firebase():
     global db
-    cred = credentials.Certificate('/home/paula/automated-liquid-mover/rpi_liquid_mover_8pumps/serviceaccount.json')
+    cred = credentials.Certificate(wd+'serviceaccount.json')
     firebase_admin.initialize_app(cred)
     db = firestore.client()
 
