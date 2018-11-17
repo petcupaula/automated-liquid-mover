@@ -68,10 +68,12 @@ chmod 666 bartender.log
 ### Interfaces
 
 * Web interface (using Firebase): https://github.com/petcupaula/mixomator9000
-* App (using Firebase)
 * Google Assistant on Google Home
-* Amazon Alexa on Echo
-* By SSH-ing into the Raspberry Pi: `python3 drinks_aio.py`
+   * Set up an IFTTT integration: Google Assistant "Say a phrase with a text ingredient" service - > Adafruit IO "Send data to Adafruit IO"
+* By SSH-ing into the Raspberry Pi: `python3 drinks_aio.py`   
+* TO-DO: App (using Firebase)
+* TO-DO: Amazon Alexa on Echo
+
 
 ### Logic
 
