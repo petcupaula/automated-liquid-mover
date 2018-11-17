@@ -21,12 +21,14 @@ nano AIOconfig.py
 
 Firebase config:
 
-```
-# Go to your firebase console and generate a service account for your project 
-# Docs: https://firebase.google.com/docs/admin/setup#add_firebase_to_your_app
-# Download the JSON file and save it in the file `serviceaccount.json` on the server
+* Create the Firebase config for the Mixomator: https://github.com/petcupaula/mixomator9000
+* Go to your firebase console and generate a service account for your project (docs: https://firebase.google.com/docs/admin/setup#add_firebase_to_your_app)
+* Download the JSON file and save it in the file `serviceaccount.json` on the server
 
-```
+Change from user `paula` to your own user:
+* in `drinks_aio.py`
+* in `drinks.service`
+
 
 ## Running at startup
 
@@ -43,12 +45,12 @@ python3 drinks_aio.py
 
 ## Users, working directory and permissions
 
-User (root access):
+The code uses the following user (root access):
 ```
 paula
 ```
 
-Working directory:
+Therefore the working directory is the following, and you should change the path in your code:
 ```
 /home/paula/automated-liquid-mover/rpi_liquid_mover_8pumps
 ```
@@ -65,11 +67,11 @@ chmod 666 bartender.log
 
 ### Interfaces
 
-* Web interface (using Firebase)
+* Web interface (using Firebase): https://github.com/petcupaula/mixomator9000
 * App (using Firebase)
 * Google Assistant on Google Home
 * Amazon Alexa on Echo
-* By SSH-ing into the Raspberry Pi
+* By SSH-ing into the Raspberry Pi: `python3 drinks_aio.py`
 
 ### Logic
 
