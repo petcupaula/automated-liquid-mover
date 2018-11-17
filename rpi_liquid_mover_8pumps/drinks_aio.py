@@ -56,12 +56,20 @@ def get_recipe(drink):
     drinks_ref = db.collection(u'drinks')
     doc = drinks_ref.document(drink).get()
     drink_doc = doc.to_dict()
-    #print(drink_doc)
+    if drink_doc is None:
+        print("Getting drink by name")
+        docs = drinks_ref.where(u'available', u'==', True).get()
+        print(docs)
+        for doc in docs:
+            if doc.to_dict()['name'].lower() == drink.lower() or doc.to_dict()['name'].lower() == ("a "+ drink.lower()):
+               drink_doc = doc.to_dict()
+    print(drink_doc)
     logging.info(drink_doc['name'])
     recipe = drink_doc['ingredients']
     print(recipe)
     logging.info(recipe)
     return recipe
+        
 
 def connected(client):
     print('Connected to AIO!  Listening for '+mqtt_feed_sub+' changes...')
