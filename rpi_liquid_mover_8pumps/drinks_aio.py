@@ -61,7 +61,7 @@ def get_recipe(drink):
         docs = drinks_ref.where(u'available', u'==', True).get()
         print(docs)
         for doc in docs:
-            if doc.to_dict()['name'].lower() == drink.lower() or doc.to_dict()['name'].lower() == ("a "+ drink.lower()):
+            if doc.to_dict()['name'].lower() == drink.lower() or ("a" + doc.to_dict()['name'].lower()) == drink.lower():
                drink_doc = doc.to_dict()
     print(drink_doc)
     logging.info(drink_doc['name'])
