@@ -4,24 +4,59 @@
 
 ```
 pip3 install adafruit-io
-
-# Set AIOKEY and AIOUSER environment variable:
-sudo nano /etc/environment
 pip3 install firebase-admin
+
+cd /home/paula/automated-liquid-mover/rpi_liquid_mover_8pumps
+```
+
+## Config
+
+Adafruit IO config:
+
+```
+cp AIOconfig_template.py AIOconfig.py
+nano AIOconfig.py
+# Add your AIO user and key and save file
+```
+
+Firebase config:
+
+```
+# Go to your firebase console and generate a service account for your project 
+# Docs: https://firebase.google.com/docs/admin/setup#add_firebase_to_your_app
+# Download the JSON file and save it in the file `serviceaccount.json` on the server
+
 ```
 
 ## Running at startup
 
 ```
-sudo cp drinks /etc/init/drinks
-sudo chmod +x /etc/init/drinks
-sudo update-rc.d drinks defaults
+sudo cp drinks.service /etc/system/drinks.service
+systemctl enable drinks.service
 ```
 
 ## Running manually
 
 ```
 python3 drinks_aio.py
+```
+
+## Users, working directory and permissions
+
+User (root access):
+```
+paula
+```
+
+Working directory:
+```
+/home/paula/automated-liquid-mover/rpi_liquid_mover_8pumps
+```
+
+Ensure:
+```
+chmod +x drinks_aio.py
+chmod 666 bartender.log
 ```
 
 ## Operating Procedures
